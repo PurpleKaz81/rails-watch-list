@@ -1,0 +1,13 @@
+<%= link_to "Back to movies", movies_path %>
+
+<h2><%= @movie.title %></h2>
+<p><%= @movie.overview %></p>
+<p><%= @movie.poster_url %></p>
+<p><%= @movie.rating %></p>
+
+<%# fix lines below %>
+<% @movie.reviews.each do |review| %>
+  <li class="list-group-item"><%= review.content %> <%= "Rating: #{review.rating}" %> </li>
+<% end %>
+
+<%= link_to "Add a Review", new_movie_review_path(@movie) %>

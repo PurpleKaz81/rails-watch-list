@@ -48,6 +48,14 @@ gem 'font-awesome-sass', '~> 6.1'
 
 gem 'simple_form', github: 'heartcombo/simple_form'
 
+gem 'json'
+
+gem 'rest-client'
+
+gem 'open-uri'
+
+gem 'pp'
+
 # Use Sass to process CSS
 gem 'sassc-rails'
 
