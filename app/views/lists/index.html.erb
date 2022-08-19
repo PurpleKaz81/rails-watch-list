@@ -1,4 +1,5 @@
-<h1>Lists</h1>
+<h1>My Lists</h1>
+<%= link_to "New List", new_list_path %>
 <%= link_to "Add a New List", new_list_path(@list) %>
 <ul style="list-style: none">
   <% @lists.each do |list| %>
