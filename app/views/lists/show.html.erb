@@ -4,7 +4,7 @@
 
 <%# fix lines below %>
 <% @list.bookmarks.each do |bookmark| %>
-  <li class="list-group-item"> <%= "My Comments: #{bookmark.comment}" %> <%= "Title: #{bookmark.movie.title}" %> <%= "Rating: #{bookmark.movie.rating}" %> </li>
+  <li class="list-group-item"> <%= "Title: #{bookmark.movie.title}" %> <%= "My Comments: #{bookmark.comment}" %> <%= "Rating: #{bookmark.movie.rating}" %> </li>
 <% end %>
 
 <%= link_to "Add a bookmark", new_list_bookmark_path(@list) %>

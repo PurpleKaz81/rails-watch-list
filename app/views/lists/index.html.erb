@@ -1,8 +1,18 @@
-<h1>My Lists</h1>
-<%= link_to "New List", new_list_path %>
-<%= link_to "Add a New List", new_list_path(@list) %>
-<ul style="list-style: none">
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="container">
+    <%= link_to "New List", new_list_path, class: "btn btn-gradient" %>
+    <%= link_to "Add a New List", new_list_path(@list) %>
+  </div>
+</nav>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+  <%= image_tag "cinema_logo.jpg", alt: "Movie Lists", width: 200 %>
+  <div class="container" class="cinema_logo">
+    <h1>My Lists</h1>
+    <ul style="list-style: none">
+      <% @lists.each do |list| %>
+        <li><%= link_to list.name, list_path(list) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
