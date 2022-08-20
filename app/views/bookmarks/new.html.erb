@@ -5,13 +5,11 @@
         <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.association :movie, :prompt => "Choose a Movie", collection: Movie.order('title ASC'), class: ".form-control-sm" %>
           <%= f.input :comment, placeholder: "So what did you think?", class: ".form-control-sm" %>
-          <%# f.input :rating %>
           <div class="d-flex justify-content-between">
             <%= f.submit "Add Your Bookmark", class: "btn btn-primary .text-nowrap" %>
-            <%= f.submit "Cancel", class: "btn btn-link .btn-outline-* .text-nowrap" %>
+            <%= f.submit class: "fa-solid fa-dumpster-fire" %>
           </div>
         <% end %>
     </div>
   </div>
-  <%# <button type="button" class="btn btn-link">Cancel</button> %>
 </div>
