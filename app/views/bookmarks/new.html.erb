@@ -1,7 +1,17 @@
-<h2>New bookmark</h2>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%# f.input :rating %>
-  <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div style="height:100vh" class="d-flex align-items-center justify-content-center">
+    <div>
+      <h2 class="d-flex justify-content-center">New Bookmark</h2>
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.association :movie, :prompt => "Choose a Movie", collection: Movie.order('title ASC'), class: ".form-control-sm" %>
+          <%= f.input :comment, placeholder: "So what did you think?", class: ".form-control-sm" %>
+          <%# f.input :rating %>
+          <div class="d-flex justify-content-between">
+            <%= f.submit "Add Your Bookmark", class: "btn btn-primary .text-nowrap" %>
+            <%= f.submit "Cancel", class: "btn btn-link .btn-outline-* .text-nowrap" %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+  <%# <button type="button" class="btn btn-link">Cancel</button> %>
+</div>
